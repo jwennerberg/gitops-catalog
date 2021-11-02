@@ -1,0 +1,16 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+namespace: openshift-vertical-pod-autoscaler
+
+bases:
+  - ../../base
+
+patches:
+  - target:
+      kind: Subscription
+      name: vertical-pod-autoscaler
+    patch: |-
+      - op: replace
+        path: /spec/channel
+        value: '4.8'

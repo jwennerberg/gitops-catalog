@@ -1,0 +1,21 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+namespace: openshift-vertical-pod-autoscaler
+
+commonAnnotations:
+  argocd.argoproj.io/sync-wave: "0"
+
+resources:
+  - namespace.yaml
+  - vpa-operator-subscription.yaml
+  - vpa-operator-operatorgroup.yaml
+
+patches:
+  - target:
+      kind: Subscription
+      name: vertical-pod-autoscaler
+    patch: |-
+      - op: replace
+        path: /spec/channel
+        value: 'stable'
