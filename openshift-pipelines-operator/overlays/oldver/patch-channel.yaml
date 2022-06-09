@@ -1,6 +1,9 @@
 - op: replace
   path: /spec/channel
   value: latest
+- op: replace
+  path: /spec/installPlanApproval
+  value: Manual
 - op: add
   path: /spec/startingCSV
   value: openshift-pipelines-operator-rh.v1.6.3
