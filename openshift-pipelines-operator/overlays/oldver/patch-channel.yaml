@@ -1,0 +1,6 @@
+- op: replace
+  path: /spec/channel
+  value: stable
+- op: add
+  path: /spec/startingCSV
+  value: openshift-pipelines-operator.1.6.8
