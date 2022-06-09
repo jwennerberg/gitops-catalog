@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/channel
-  value: stable
+  value: latest
 - op: add
   path: /spec/startingCSV
   value: openshift-pipelines-operator-rh.v1.6.3
