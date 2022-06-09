@@ -3,4 +3,4 @@
   value: stable
 - op: add
   path: /spec/startingCSV
-  value: openshift-pipelines-operator.1.6.8
+  value: openshift-pipelines-operator-rh.v1.6.3
