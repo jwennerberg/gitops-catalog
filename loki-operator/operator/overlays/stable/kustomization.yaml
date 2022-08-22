@@ -10,8 +10,8 @@ patches:
       group: operators.coreos.com
       version: v1alpha1
       kind: Subscription
-      name: loki
-      namespace: openshift-logging
+      name: loki-operator
+      namespace: openshift-operators-redhat
     patch: |-
       - op: replace
         path: /spec/channel
